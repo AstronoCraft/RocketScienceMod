@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rocketscience:block/rocket_structure_block"
+  }
+}

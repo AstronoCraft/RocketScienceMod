@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "rocketscience:raw_titanium_block",
+    "rocketscience:titanium_block",
+    "rocketscience:titanium_ore",
+    "rocketscience:deepslate_titanium_ore",
+    "rocket_structure_block",
+    "oxygen_diffuser"
+  ]
+}

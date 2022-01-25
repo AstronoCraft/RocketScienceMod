@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AIA",
+    "ITI",
+    "AIA"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "rocketscience:titanium_block"
+    },
+    "A": {
+      "item": "rocketscience:aluminium_foil"
+    }
+  },
+  "result": {
+    "item": "rocketscience:rocket_structure_block"
+  }
+}

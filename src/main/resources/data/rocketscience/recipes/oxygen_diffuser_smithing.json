@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "rocketscience:rocket_structure_block"
+  },
+  "addition": {
+    "item": "minecraft:iron_bars"
+  },
+  "result": {
+    "item": "rocketscience:oxygen_diffuser"
+  }
+}

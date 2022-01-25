@@ -1,0 +1,16 @@
+{
+  "item.rocketscience.raw_titanium": "Raw Titanium",
+  "item.rocketscience.titanium_ingot": "Titanium Ingot",
+  "item.rocketscience.titanium_nugget": "Titanium Nugget",
+  "item.rocketscience.aluminium_foil": "Aluminium Foil",
+
+  "block.rocketscience.raw_titanium_block": "Raw Titanium Block",
+  "block.rocketscience.titanium_block": "Titanium Block",
+  "block.rocketscience.titanium_ore": "Titanium Ore",
+  "block.rocketscience.deepslate_titanium_ore": "Deepslate Titanium Ore",
+
+  "block.rocketscience.rocket_structure_block": "Rocket Structure Block",
+  "block.rocketscience.oxygen_diffuser": "Oxygen Diffuser",
+
+  "itemGroup.rockettab": "Rocket Science"
+}
