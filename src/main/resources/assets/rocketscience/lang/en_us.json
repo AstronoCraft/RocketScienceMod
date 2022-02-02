@@ -4,6 +4,14 @@
   "item.rocketscience.titanium_nugget": "Titanium Nugget",
   "item.rocketscience.aluminium_foil": "Aluminium Foil",
 
+  "item.rocketscience.copper_rocket": "Copper Rocket",
+  "item.rocketscience.iron_rocket": "Iron Rocket",
+  "item.rocketscience.titanium_rocket": "Titanium Rocket",
+
+  "block.rocketscience.moon_dust": "Moon Dust Carpet",
+  "block.rocketscience.moon_dust_block": "Moon Dust Block",
+  "block.rocketscience.moon_stone": "Moon Stone",
+
   "block.rocketscience.raw_titanium_block": "Raw Titanium Block",
   "block.rocketscience.titanium_block": "Titanium Block",
   "block.rocketscience.titanium_ore": "Titanium Ore",
@@ -11,6 +19,8 @@
 
   "block.rocketscience.rocket_structure_block": "Rocket Structure Block",
   "block.rocketscience.oxygen_diffuser": "Oxygen Diffuser",
+  "block.rocketscience.rocket_builder": "Rocket Builder",
 
-  "itemGroup.rockettab": "Rocket Science"
+  "itemGroup.rocket_tab": "Rocket Science",
+  "itemGroup.rocket_devise_tab": "Rocket Science's Devise"
 }

@@ -1,10 +1,14 @@
 {
   "replace": false,
   "values": [
+    "rocketscience:moon_dust_block",
+    "rocketscience:moon_stone",
+
     "rocketscience:raw_titanium_block",
     "rocketscience:titanium_block",
     "rocketscience:titanium_ore",
     "rocketscience:deepslate_titanium_ore",
+
     "rocket_structure_block",
     "oxygen_diffuser"
   ]

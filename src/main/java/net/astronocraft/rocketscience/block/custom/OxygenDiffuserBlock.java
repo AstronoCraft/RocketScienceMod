@@ -9,8 +9,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class OxygenDiffuser extends Block {
-    public OxygenDiffuser(Properties properties) {
+public class OxygenDiffuserBlock extends Block {
+    public OxygenDiffuserBlock(Properties properties) {
         super(properties);
     }
 
@@ -19,6 +19,7 @@ public class OxygenDiffuser extends Block {
         if (!pLevel.isClientSide()) {
             if (pEntity instanceof LivingEntity) {
                 LivingEntity entity = ((LivingEntity) pEntity);
+                entity.canBreatheUnderwater();
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 20, 1));
             }
         }

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "rocketscience:block/rocket_builder_front",
+    "north": "rocketscience:block/rocket_builder_front",
+    "south": "rocketscience:block/rocket_builder_front",
+    "east": "rocketscience:block/rocket_builder_side",
+    "west": "rocketscience:block/rocket_builder_side",
+    "up": "rocketscience:block/rocket_builder_top",
+    "down": "rocketscience:block/rocket_builder_bottom"
+  }
+}

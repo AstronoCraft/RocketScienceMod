@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AIA",
-    "ITI",
-    "AIA"
+    "INI",
+    "NTN",
+    "INI"
   ],
   "key": {
     "I": {
@@ -12,8 +12,8 @@
     "T": {
       "item": "rocketscience:titanium_block"
     },
-    "A": {
-      "item": "rocketscience:aluminium_foil"
+    "N": {
+      "item": "rocketscience:titanium_ingot"
     }
   },
   "result": {

@@ -23,9 +23,18 @@ public class ModItems {
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ROCKET_TAB)));
 
+
     //ALUMINIUM
     public static final RegistryObject<Item> ALUMINIUM_FOIL = ITEMS.register("aluminium_foil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ROCKET_TAB)));
+
+    //ROCKETS
+    public static final RegistryObject<Item> COPPER_ROCKET = ITEMS.register("copper_rocket",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ROCKET_DEVISE_TAB)));
+    public static final RegistryObject<Item> IRON_ROCKET = ITEMS.register("iron_rocket",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ROCKET_DEVISE_TAB)));
+    public static final RegistryObject<Item> TITANIUM_ROCKET = ITEMS.register("titanium_rocket",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ROCKET_DEVISE_TAB)));
 
 
     public static void register(IEventBus eventBus) {

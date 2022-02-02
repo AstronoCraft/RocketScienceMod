@@ -1,7 +1,11 @@
 package net.astronocraft.rocketscience;
 
 import net.astronocraft.rocketscience.block.ModBlocks;
+import net.astronocraft.rocketscience.block.entity.ModBlockEntities;
 import net.astronocraft.rocketscience.item.ModItems;
+import net.astronocraft.rocketscience.screen.ModMenuTypes;
+import net.astronocraft.rocketscience.screen.SmallRocketBuilderScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,10 +38,17 @@ public class RocketScience
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        MenuScreens.register(ModMenuTypes.ROCKET_BUILDER_MENU.get(), SmallRocketBuilderScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)

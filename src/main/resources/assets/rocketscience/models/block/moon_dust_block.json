@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "rocketscience:block/moon_dust_block",
+    "north": "rocketscience:block/moon_dust_block",
+    "south": "rocketscience:block/moon_dust_block",
+    "east": "rocketscience:block/moon_dust_block",
+    "west": "rocketscience:block/moon_dust_block",
+    "up": "rocketscience:block/moon_dust",
+    "down": "rocketscience:block/moon_stone"
+  }
+}
