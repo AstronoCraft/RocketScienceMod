@@ -26,10 +26,10 @@ public class ModBlocks {
     //Natural
     public static final RegistryObject<CarpetBlock> MOON_DUST = registerBlock("moon_dust",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+                    .strength(1f)), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> MOON_DUST_BLOCK = registerBlock("moon_dust_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+                    .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> MOON_STONE = registerBlock("moon_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);

@@ -15,8 +15,7 @@ public class ModMenuTypes {
             DeferredRegister.create(ForgeRegistries.CONTAINERS, RocketScience.MOD_ID);
 
     public static final RegistryObject<MenuType<RocketBuilderMenu>> ROCKET_BUILDER_MENU =
-            registerMenuType(RocketBuilderMenu::new, "rocket_builder");
-
+            registerMenuType(RocketBuilderMenu::new, "rocket_builder_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {

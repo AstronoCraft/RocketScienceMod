@@ -43,7 +43,7 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("small_rocket_builder");
+        return new TextComponent("rocket_builder");
     }
 
     @Nullable

@@ -14,7 +14,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab ROCKET_DEVISE_TAB = new CreativeModeTab("rocket_devise_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.TITANIUM_ROCKET.get());
+            return new ItemStack(ModItems.TITANIUM_ROCKET_ITEM.get());
         }
     };
 }

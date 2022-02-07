@@ -9,11 +9,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class SmallRocketBuilderScreen extends AbstractContainerScreen<RocketBuilderMenu> {
+public class RocketBuilderScreen extends AbstractContainerScreen<RocketBuilderMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(RocketScience.MOD_ID, "textures/gui/small_rocket_builder.png");
+            new ResourceLocation(RocketScience.MOD_ID, "textures/gui/rocket_builder.png");
 
-    public SmallRocketBuilderScreen(RocketBuilderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public RocketBuilderScreen(RocketBuilderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
 
