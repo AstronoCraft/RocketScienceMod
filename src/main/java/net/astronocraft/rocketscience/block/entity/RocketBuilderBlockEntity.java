@@ -96,9 +96,6 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, RocketBuilderBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) {
-            craftItem(pBlockEntity);
-        }
     }
 
     private static void craftItem(RocketBuilderBlockEntity entity) {
@@ -118,5 +115,4 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
     private static boolean hasNotReachedStackLimit(RocketBuilderBlockEntity entity) {
         return entity.itemHandler.getStackInSlot(7).getCount() < entity.itemHandler.getStackInSlot(7).getMaxStackSize();
     }
-
 }
