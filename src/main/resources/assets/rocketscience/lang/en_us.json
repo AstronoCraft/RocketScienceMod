@@ -21,6 +21,8 @@
   "block.rocketscience.oxygen_diffuser": "Oxygen Diffuser",
   "block.rocketscience.rocket_builder": "Rocket Builder",
 
+  "gui.rocketscience.rocket_builder": "Rocket Builder",
+
   "itemGroup.rocket_tab": "Rocket Science",
   "itemGroup.rocket_devise_tab": "Rocket Science's Devise"
 }

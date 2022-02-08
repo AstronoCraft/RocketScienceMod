@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 
 public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(8) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -63,6 +63,18 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     @Override
+    public void onLoad() {
+        super.onLoad();
+        lazyItemHandler = LazyOptional.of(() -> itemHandler);
+    }
+
+    @Override
+    public void invalidateCaps()  {
+        super.invalidateCaps();
+        lazyItemHandler.invalidate();
+    }
+
+    @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
         tag.put("inventory", itemHandler.serializeNBT());
         super.saveAdditional(tag);
@@ -94,9 +106,8 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
         entity.itemHandler.extractItem(1, 1, false);
 
         entity.itemHandler.setStackInSlot(7, new ItemStack(ModItems.TITANIUM_INGOT.get(),
-                entity.itemHandler.getStackInSlot(3).getCount() + 1));
+                entity.itemHandler.getStackInSlot(7).getCount() + 1));
     }
-
     private static boolean hasRecipe(RocketBuilderBlockEntity entity) {
         boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.ALUMINIUM_FOIL.get();
         boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.ALUMINIUM_FOIL.get();
@@ -105,7 +116,7 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private static boolean hasNotReachedStackLimit(RocketBuilderBlockEntity entity) {
-        return entity.itemHandler.getStackInSlot(3).getCount() < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+        return entity.itemHandler.getStackInSlot(7).getCount() < entity.itemHandler.getStackInSlot(7).getMaxStackSize();
     }
 
 }
