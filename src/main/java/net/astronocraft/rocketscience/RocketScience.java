@@ -3,6 +3,7 @@ package net.astronocraft.rocketscience;
 import net.astronocraft.rocketscience.block.ModBlocks;
 import net.astronocraft.rocketscience.block.entity.ModBlockEntities;
 import net.astronocraft.rocketscience.item.ModItems;
+import net.astronocraft.rocketscience.recipe.ModRecipes;
 import net.astronocraft.rocketscience.screen.ModMenuTypes;
 import net.astronocraft.rocketscience.screen.RocketBuilderScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -32,6 +33,8 @@ public class RocketScience
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

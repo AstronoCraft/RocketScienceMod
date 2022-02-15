@@ -1,2 +1,3 @@
  - Block are impossible to break
- - GUI Rocket Builder won't show up
+ - Moon dust carpet texture glitches
+ - Copper rocket won't spawn

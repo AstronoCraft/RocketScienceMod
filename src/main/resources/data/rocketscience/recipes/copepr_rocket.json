@@ -1,0 +1,11 @@
+{
+  "type": "rocketscience:rocket",
+  "ingredient": {
+    "slot5": "minecraft:blast_furnace",
+    "slot6": "minecraft:copper_block",
+    "slot7": "minecraft:tinted_glass"
+  },
+  "result": {
+    "item": "rocketscience:rocket_builder"
+  }
+}

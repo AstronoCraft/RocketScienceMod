@@ -25,11 +25,11 @@ public class ModBlocks {
 
     //Natural
     public static final RegistryObject<CarpetBlock> MOON_DUST = registerBlock("moon_dust",
-            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f)), ModCreativeModeTab.ROCKET_TAB);
-    public static final RegistryObject<Block> MOON_DUST_BLOCK = registerBlock("moon_dust_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.WOOL)
                     .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+    public static final RegistryObject<Block> MOON_DUST_BLOCK = registerBlock("moon_dust_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> MOON_STONE = registerBlock("moon_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
@@ -40,24 +40,24 @@ public class ModBlocks {
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = registerBlock("raw_titanium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
     public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = registerBlock("deepslate_titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
+                    .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_TAB);
 
     //advanced blocks
     public static final RegistryObject<Block> ROCKET_STRUCTURE_BLOCK = registerBlock("rocket_structure_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
     public static final RegistryObject<Block> OXYGEN_DIFFUSER = registerBlock("oxygen_diffuser",
             () -> new OxygenDiffuserBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
     public static final RegistryObject<Block> ROCKET_BUILDER = registerBlock("rocket_builder",
             () -> new RocketBuilderBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.ROCKET_DEVISE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -69,6 +69,7 @@ public class ModBlocks {
                                                                             CreativeModeTab tab) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
+
     }
 
     public static void register(IEventBus eventBus) {

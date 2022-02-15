@@ -8,6 +8,11 @@
   "item.rocketscience.iron_rocket": "Iron Rocket",
   "item.rocketscience.titanium_rocket": "Titanium Rocket",
 
+  "item.rocketscience.copper_analyser": "Copper Analyser",
+  "item.rocketscience.earth_copper_analyser": "Earth Copper Analyser",
+  "item.rocketscience.sky_copper_analyser": "Sky Copper Analyser",
+  "item.rocketscience.space_copper_analyser": "Space Copper Analyser",
+
   "block.rocketscience.moon_dust": "Moon Dust Carpet",
   "block.rocketscience.moon_dust_block": "Moon Dust Block",
   "block.rocketscience.moon_stone": "Moon Stone",

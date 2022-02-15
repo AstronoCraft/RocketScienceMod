@@ -1,5 +1,6 @@
 package net.astronocraft.rocketscience.block.entity;
 
+import net.astronocraft.rocketscience.item.ModItems;
 import net.astronocraft.rocketscience.screen.RocketBuilderMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,6 +13,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -41,7 +43,7 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("rocket_builder");
+        return new TextComponent("Rocket Builder");
     }
 
     @Nullable
@@ -94,5 +96,29 @@ public class RocketBuilderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, RocketBuilderBlockEntity pBlockEntity) {
+        if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) {
+            craftItem(pBlockEntity);
+        }
+    }
+
+    private static void craftItem(RocketBuilderBlockEntity entity) {
+        entity.itemHandler.setStackInSlot(7, new ItemStack(ModItems.COPPER_ROCKET_ITEM.get(),
+                entity.itemHandler.getStackInSlot(7).getCount() + 1));
+
+        entity.itemHandler.extractItem(4, 1, false);
+        entity.itemHandler.extractItem(5, 1, false);
+        entity.itemHandler.extractItem(6, 1, false);
+    }
+
+    private static boolean hasRecipe(RocketBuilderBlockEntity entity) {
+        boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(4).getItem() == ModItems.ALUMINIUM_FOIL.get();
+        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(5).getItem() == ModItems.ALUMINIUM_FOIL.get();
+        boolean hasItemInThirdSlot = entity.itemHandler.getStackInSlot(6).getItem() == ModItems.ALUMINIUM_FOIL.get();
+
+        return hasItemInFirstSlot && hasItemInSecondSlot && hasItemInThirdSlot;
+    }
+
+    private static boolean hasNotReachedStackLimit(RocketBuilderBlockEntity entity) {
+        return entity.itemHandler.getStackInSlot(7).getCount() < entity.itemHandler.getStackInSlot(7).getMaxStackSize();
     }
 }

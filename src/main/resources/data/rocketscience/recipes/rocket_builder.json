@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "rocketscience:rocket_structure_block"
+  },
+  "addition": {
+    "item": "rocketscience:copper_analyser"
+  },
+  "result": {
+    "item": "rocketscience:rocket_builder"
+  }
+}
